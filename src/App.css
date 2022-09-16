@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
+
+.navbar {
+    background-color: rgb(240, 240, 240);
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.navbar .link-nav-grupo1 {
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+}
+
+.navbar .link-nav-grupo2 {
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+}
+
+.container-logo-nav {
+    margin-left: 550px;
+    margin-right: 650px;
+}
+
+.navbar .logo-nav {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
