@@ -1,19 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMagnifyingGlass, faUser} from '@fortawesome/free-solid-svg-icons';
+import {faHeart, faUser} from '@fortawesome/free-solid-svg-icons';
 
 const IconsNavGrup2 = () => {
     return (
         <>
             <li>
-                <a className='link-nav-grupo2' href="#">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </a>
-              </li>
-              <li><a className='link-nav-grupo2' href="#">
-              <FontAwesomeIcon icon={faUser} />
-                </a>
-              </li>
+              <a className="link-nav">
+              <FontAwesomeIcon icon={faHeart} />
+              </a>
+            </li>
+            <li>
+            <a className="link-nav">
+            <FontAwesomeIcon icon={faUser} />
+            </a>
+            </li>
         </>
     );
 }
