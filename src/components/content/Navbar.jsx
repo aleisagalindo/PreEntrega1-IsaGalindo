@@ -1,8 +1,7 @@
 import React from "react";
-import LogoNav from "./LogoNav";
-import IconsNavGrup1 from "./IconsNavGrup1";
-import IconsNavGrup2 from "./IconsNavGrup2";
-import "../App.css";
+import IconsNavGrup1 from "../layout/IconsNavGrup1";
+import IconsNavGrup2 from "../layout/IconsNavGrup2";
+import "../../styles/App.css";
 
 const Navbar = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
-import SearchFilter from "./SearchFilter";
-import ProductsSection from "./ProductsSection";
+import SearchFilter from "../layout/SearchFilter";
+import ProductsSection from "../layout/ProductsSection";
 
 
 const MainSection = () => {

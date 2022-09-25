@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Onix",
+        "modelo": "Ring",
+        "precio": 5500,
+        "stock": 30,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Anillo bañado en oro con piedra onix natural."
+    },
+    {
+        "id": 2,
+        "nombre": "Ninfa",
+        "modelo": "Ring",
+        "precio": 3500,
+        "stock": 10,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Aros de perlas naturales con enganches de oro."
+    },
+    {
+        "id": 3,
+        "nombre": "Set",
+        "modelo": "Magno",
+        "precio": 11500,
+        "stock": 5,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Pack de collares bañados en oro con chapa grabada."
+    },
+    {
+        "id": 4,
+        "nombre": "Europe",
+        "modelo": "Ring",
+        "precio": 6500,
+        "stock": 15,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Anillo bañado en oro con perla natural."
+    },
+    {
+        "id": 5,
+        "nombre": "Gaia",
+        "modelo": "Ring",
+        "precio": 2500,
+        "stock": 4,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Anillo bañado en oro estilo derretido."
+    },
+    {
+        "id": 6,
+        "nombre": "Atenea",
+        "modelo": "Hoops",
+        "precio": 1500,
+        "stock": 3,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Aros enchapados con forma de C."
+    },
+    {
+        "id": 7,
+        "nombre": "Afrodita",
+        "modelo": "Necklace",
+        "precio": 7500,
+        "stock": 9,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Collar de perlas con cadena y chapas bañadas en oro."
+    },
+    {
+        "id": 8,
+        "nombre": "Jade",
+        "modelo": "Ring",
+        "precio": 5500,
+        "stock": 30,
+        "img": "anillo-piedra-negra.jpg",
+        "descripcion": "Anillo de piedra Jade natural."
+    }
+]
