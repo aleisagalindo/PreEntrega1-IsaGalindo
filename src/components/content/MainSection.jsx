@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "./Header";
-import SearchFilter from "../layout/SearchFilter";
-import ProductsSection from "../layout/ProductsSection";
+import ItemListContainer from "../layout/ItemListContainer";
 
 
 const MainSection = () => {
   return (
     <>
       <main>
-        <Header/>
-        <SearchFilter/>
-        <ProductsSection/>
+        <section>
+          <p className="titulo-pricipal1">SKINCARE  INSPIRED BY MOTHER NATURE</p>
+          <img className="img-1" src="../img/piel-gotas.png" alt="" srcset="" />
+        </section>
+        <ItemListContainer/>
       </main>
     </>
   );

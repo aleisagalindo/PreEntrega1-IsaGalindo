@@ -1,19 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHeart, faUser} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const IconsNavGrup2 = () => {
     return (
         <>
             <li>
-              <a className="link-nav">
+              <Link className="link-nav" to="/favoritos">
               <FontAwesomeIcon icon={faHeart} />
-              </a>
+              </Link>
             </li>
             <li>
-            <a className="link-nav">
+            <Link className="link-nav" to="/cuenta">
             <FontAwesomeIcon icon={faUser} />
-            </a>
+            </Link>
             </li>
         </>
     );

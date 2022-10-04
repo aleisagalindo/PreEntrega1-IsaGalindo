@@ -1,74 +1,90 @@
 [
     {
         "id": 1,
-        "nombre": "Onix",
-        "modelo": "Ring",
+        "nombre": "LIP MASK WITH ACAI AND VANILLA",
+        "idCategoria": "1",
+        "piel":"All",
         "precio": 5500,
         "stock": 30,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Anillo bañado en oro con piedra onix natural."
+        "img": "lip-mask-with-acai-and-vanilla.jpeg",
+        "descripcion": "Moisturizing overnight lip treatment",
+        "descripcionDetallada":"Moisturizing overnight lip treatment Acai and Vanilla scented. Provides hydration with multi-vitamins"
     },
     {
         "id": 2,
-        "nombre": "Ninfa",
-        "modelo": "Ring",
+        "nombre": "COCONUT BODY OIL",
+        "idCategoria": "1",
+        "piel":"All",
         "precio": 3500,
         "stock": 10,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Aros de perlas naturales con enganches de oro."
+        "img": "coconut-body-oil.jpeg",
+        "descripcion": "A nutrient-rich coconut body oil",
+        "descripcionDetallada":"A nutrient-rich coconut body oil. Lightweight, yet deeply moisturizing. Spray-on glow and hydration"
     },
     {
         "id": 3,
-        "nombre": "Set",
-        "modelo": "Magno",
+        "nombre": "COCONUT BODY SCRUB",
+        "idCategoria": "2",
+        "piel":"Acne",
         "precio": 11500,
         "stock": 5,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Pack de collares bañados en oro con chapa grabada."
+        "img": "coconut-body-scrub.jpeg",
+        "descripcion": "Niacinamide and Salicylic Acid",
+        "descripcionDetallada":"Coconut Body Scrub. Polishes, Buffs & Moisturizes. Niacinamide and Salicylic Acid"
     },
     {
         "id": 4,
-        "nombre": "Europe",
-        "modelo": "Ring",
+        "nombre": "COCONUT BODY SOAP",
+        "idCategoria": "2",
+        "piel":"Acne",
         "precio": 6500,
         "stock": 15,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Anillo bañado en oro con perla natural."
+        "img": "coconut-body-soap.jpeg",
+        "descripcion": "Moisturizing Jojoba, Rice Bran and Coconut",
+        "descripcionDetallada":"Lightweight, gel based body wash. Moisturizing Jojoba, Rice Bran and Coconut. Restores the natural glow in your skin"
     },
     {
         "id": 5,
-        "nombre": "Gaia",
-        "modelo": "Ring",
+        "nombre": "MINERAL SUNSCREEN SPF 30",
+        "idCategoria": "3",
+        "piel":"Dry",
         "precio": 2500,
         "stock": 4,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Anillo bañado en oro estilo derretido."
+        "img": "mineral-sunscreen-spf-30.jpeg",
+        "descripcion": "Oil-free Mineral Sunscreen. Hyaluronic Acid & Botanicals",
+        "descripcionDetallada":"Oil-free Mineral Sunscreen. SPF 30 sun protection. Hyaluronic Acid & Botanicals"
     },
     {
         "id": 6,
-        "nombre": "Atenea",
-        "modelo": "Hoops",
+        "nombre": "DRYING PATCH",
+        "idCategoria": "5",
+        "piel":"Sensitive",
         "precio": 1500,
         "stock": 3,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Aros enchapados con forma de C."
+        "img": "drying-patch.jpeg",
+        "descripcion": "Exfoliating, non drying patches. Day or night, target blemishes on-the-go.",
+        "descripcionDetallada":"Exfoliating, non drying patches. Extremely thin, clear patch camouflages skin. Day or night, target blemishes on-the-go."
     },
     {
         "id": 7,
-        "nombre": "Afrodita",
-        "modelo": "Necklace",
+        "nombre": "SUPER PEPTIDE SERUM",
+        "idCategoria": "4",
+        "piel":"Oily",
         "precio": 7500,
         "stock": 9,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Collar de perlas con cadena y chapas bañadas en oro."
+        "img": "super-peptide-serum.jpeg",
+        "descripcion": "Anti aging benefits. Hyaluronic Complex & Peptides.",
+        "descripcionDetallada":"Peptide packed serum. Anti aging benefits. Hyaluronic Complex & Peptides."
     },
     {
         "id": 8,
-        "nombre": "Jade",
-        "modelo": "Ring",
+        "nombre": "ALUMINUM FREE DEODORANT",
+        "idCategoria": "4",
+        "piel":"Oily",
         "precio": 5500,
         "stock": 30,
-        "img": "anillo-piedra-negra.jpg",
-        "descripcion": "Anillo de piedra Jade natural."
+        "img": "aluminum-free-deodorant.jpeg",
+        "descripcion": "Aluminum-free. Baking soda-free. Infused with skin-loving botanicals.",
+        "descripcionDetallada":"Aluminum-free. Baking soda-free. Infused with skin-loving botanicals."
     }
 ]

@@ -1,16 +1,16 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag, faHome} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 const IconsNavGrup1 = () => {
     return (
         <>
             <li>
-              <a className="link-nav" href="#">
+              <Link className="link-nav" to="/">
               <FontAwesomeIcon icon={faHome} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link-nav" href="#"><FontAwesomeIcon icon={faShoppingBag} /></a>
+              <Link className="link-nav" to="/carrito"><FontAwesomeIcon icon={faShoppingBag} /></Link>
             </li>
         </>
     );
