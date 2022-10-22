@@ -3,7 +3,7 @@ import { CarritoContext } from '../../context/CarritoContext';
 import { Link } from 'react-router-dom';
 
 const Carrito = () => {
-  const {carrito, agregarProducto, quitarProducto, removeAll} = useContext(CarritoContext)
+  const {carrito, agregarProducto, quitarProducto, removeAll, getTotal} = useContext(CarritoContext)
   const [carritoLocal, setCarritoLocal] = useState([]);
 
   useEffect(() => {
@@ -14,11 +14,11 @@ const Carrito = () => {
       <td className='usuarioImg'>
         <img className='userImage' src={producto.img}/>
         </td>
-      <td>{producto.nombre}</td>
+      <td className='fw-bold'>{producto.nombre}</td>
       <td>x{producto.cantidad}</td>
       <td>${producto.precio * producto.cantidad}</td>
       <td>
-        <button onClick={() => quitarProducto(producto)} className="btn btn-dark">Remove</button>
+        <button onClick={() => quitarProducto(producto)} className="btn btn-transparent"><i class="fa-solid fa-trash"></i></button>
       </td>
     </tr>
   </tbody>
@@ -44,20 +44,23 @@ const Carrito = () => {
          </table>
          </div>
       </div>
-        <button className='btn btn-danger' onClick={() => removeAll()}>Remove All</button>
-        <h1>Total:</h1>
-        <button className="btn btn-success">
-          <Link to="/contacto">Go to Pay</Link>
+        <button className='btn btn-borrarProd' onClick={() => removeAll()}>Remove All</button>
+        <h1 className='total-price'>Total: ${getTotal(carrito)}</h1>
+        <button className="btn go-to-pay">
+          <Link className='go-to-pay-link' to="/contacto">Go to Pay <i class="fa-solid fa-credit-card"></i></Link>
         </button>
       </>
     );
   }else {
     return (
       <>
-        <h1>No hay elementos en el carrito</h1>
-        <button className='btn btn-dark'>
-          <Link to="/">Go Home</Link>
+        <div className='go-home'>
+        <h1>Your cart is empty</h1>
+        <button className='btn'>
+          <Link className='link-go-home' to="/">Continue Shopping <i class="fa-solid fa-cart-shopping"></i></Link>
         </button>
+        </div>
+        
       </>
     );
   }

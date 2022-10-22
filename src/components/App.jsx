@@ -8,6 +8,7 @@ import "../styles/App.css";
 import Producto from './content/Producto';
 import ItemListCategory from './content/ItemListCategory';
 import { DarkModeProvider } from '../context/darkModeContext';
+import Checkout from './content/Checkout';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/contacto" element={<Contacto/>}/>
         <Route path="*" element={<h1>Ups! La ruta solicitada no existe</h1>}/>
+        <Route path="/checkout" element= {<Checkout/>}/>
       </Routes>
       </BrowserRouter>
     </DarkModeProvider>

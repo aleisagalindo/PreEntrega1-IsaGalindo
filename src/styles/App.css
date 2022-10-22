@@ -321,9 +321,6 @@ html {
     width: 100%;
 }
 
-  .btn-borrarProd {
-    color: black;
-  }
   .img-prod-carrito {
     display: flex;
     margin-left: -50px;
@@ -359,4 +356,65 @@ table {
   justify-content: space-evenly;
 }
 
+.go-home {
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.go-home button {
+  display: flex;
+  position: absolute;
+  margin-top: 80px;
+  margin-right: 20px;
+  background-color: #000;
+}
+
+.go-home button:hover {
+  background-color: rgb(51, 50, 50);
+}
+
+.go-home button .link-go-home {
+  text-align: center;
+  color: #a6a6a6;
+  text-decoration: none;
+}
+.total-price {
+  display: flex;
+  justify-content: end;
+  margin-right: 365px;
+  font-size: 20px;
+  margin-top: -40px;
+  font-family: "Poppins", sans-serif;
+}
+.btn-borrarProd {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 120px;
+  background-color: rgb(173, 15, 15);
+  color: white;
+  border-radius: 2px;
+}
+
+.go-to-pay {
+  display: flex;
+  margin-top: -30px;
+  margin-left: 1350px;
+  background-color: #0f0d09;
+  font-family: "Poppins", sans-serif;
+}
+.go-to-pay-link {
+  color: rgb(192, 190, 190);
+  text-decoration: none;
+}
+.go-to-pay-link:hover{
+  color: rgb(255, 255, 255);
+}
+.fa-credit-card {
+  margin-left: 5px;
+}
+.container-form {
+  font-family: "Poppins", sans-serif;
+}
 }

@@ -35,10 +35,15 @@ const removeAll = () => {
     setCarrito([])
 }
 
+const getTotal = (carrito) => { 
+    let total = 0 
+    carrito.forEach( producto => total += ( producto.cantidad * producto.precio )) 
+    return total   };
+
 
     return (
         <>
-            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, removeAll}} >
+            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, removeAll, getTotal}} >
              {props.children}
             </CarritoContext.Provider>
         </>
