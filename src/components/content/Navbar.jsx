@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import IconsNavGrup1 from "../layout/IconsNavGrup1";
 import IconsNavGrup2 from "../layout/IconsNavGrup2";
 import Dropdown from "../layout/Dropdown";
 import "../../styles/App.css";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const Navbar = () => {
-  const listDrowdon = ["All Skin", "Acne", "Dry", "Oily", "Sesitive"]
+  const {darkMode, toggleDarkMode} = useContext(DarkModeContext)
+  const listDropdown = ["All Skin", "Acne", "Dry", "Oily", "Sesitive"];
   return (
     <>
       <nav className="navbar navbar-expand-lg nav-bar">
@@ -24,11 +27,21 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <IconsNavGrup1 />
-               <Dropdown lista= {listDrowdon}/>
+              <Dropdown lista={listDropdown} />
               <Link className="navbar-brand logo-nav" to="/">
                 AMALFI
               </Link>
               <IconsNavGrup2 />
+              <li>
+                <button onClick={() => toggleDarkMode()} className="switch" id="cambiarModo">
+                  <span>
+                    <i className="fa-solid fa-sun" />
+                  </span>
+                  <span>
+                    <i className="fa-solid fa-moon" />
+                  </span>
+                </button>
+              </li>
             </ul>
           </div>
         </div>

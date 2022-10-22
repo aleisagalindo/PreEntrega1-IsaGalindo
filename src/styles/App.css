@@ -13,63 +13,124 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color:white;
-  transition: 1s ease all;
-}
-
 @media (min-width: 1200px) {
+  body {
+    background-color: white;
+    transition: 1s all ease-out;
+  }
 
-body {
-  background-color:white;
-}
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #a6a6a6;
+    border-right: 1px solid #e9d9c4;
+  }
 
-.img-1 {
-  display: flex;
-  width: 100%;
-  height: 710px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  opacity: 100%;
-}
+  .seccionProncipal {
+    background-color: white;
+  }
 
-.titulo-pricipal1 {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  z-index: 3;
-  font-family: 'Playfair Display', serif;
-  color: white;
-  font-size: 25px;
-  margin-top: 630px;
-  margin-left: 355px;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 9px;
-}
+  .darkMode {
+    background-color: black;
+    color: white;
+  }
 
-.nav-bar {
-  background-color: white;
-  font-weight: bolder;
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  margin-top: -15px;
-  position: fixed;
-  z-index: 5;
-  border: solid rgb(152, 152, 152) 1px;
-}
+  .switch {
+    background: #050505;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    padding: auto;
+    top: 23px;
+    right: 20px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+  }
 
-.logo-nav {
-  display: flex;
-  justify-content: center;
-  margin-left: 360px;
-  margin-right: 560px;
-  font-size: 40px;
-  color: black;
-}
-.logo-nav:hover {
-  color: black;
-}
+  .switch::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    background: #f6f6f6;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(78, 68, 38, 0.2);
+    box-shadow: 0px 0px 1px 1px rgba(78, 68, 38, 0.2);
+  }
+
+  .switch.active {
+    background: #e2e2e2;
+    color: #000;
+  }
+
+  .switch.active::after {
+    right: 0;
+    left: unset;
+  }
+
+  .switch span {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    background: none;
+    color: #ffffff;
+  }
+
+  .img-1 {
+    display: flex;
+    width: 100%;
+    height: 645px;
+    margin-bottom: 20px;
+    opacity: 100%;
+  }
+
+  .titulo-pricipal1 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    font-family: "Playfair Display", serif;
+    color: white;
+    font-size: 25px;
+    margin-top: 550px;
+    margin-left: 355px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 9px;
+  }
+
+  .nav-bar {
+    background-color: white;
+    font-weight: bolder;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    margin-top: -15px;;
+    z-index: 5;
+    border: solid rgb(189, 187, 187) 1px;
+  }
+
+  .logo-nav {
+    display: flex;
+    justify-content: center;
+    margin-left: 360px;
+    margin-right: 490px;
+    font-size: 40px;
+    color: black;
+  }
+  .logo-nav:hover {
+    color: black;
+  }
 
   .link-nav {
     display: flex;
@@ -83,7 +144,7 @@ body {
     color: black;
     background: none;
   }
-  
+
   .texto-resultado-busqueda {
     display: flex;
     z-index: 3;
@@ -95,13 +156,12 @@ body {
     font-weight: 500;
   }
 
-
-  .container-categoria{
+  .container-categoria {
     width: auto;
-    background-color:white;
     padding-top: 15px;
     padding-bottom: 80px;
     margin-left: 100px;
+    font-family: "Poppins", sans-serif;
   }
 
   .categoria-producto {
@@ -121,7 +181,7 @@ body {
 
   .category-button {
     margin-top: 15px;
-    color: #0F0D09;
+    color: #0f0d09;
     font-size: 18px;
   }
   .category-button:hover {
@@ -129,7 +189,6 @@ body {
   }
 
   .container-productos {
-    background-color:white;
     padding-top: 60px;
     padding-bottom: 80px;
     margin-left: 190px;
@@ -148,7 +207,6 @@ body {
     text-align: initial;
   }
 
-  
   .titulo-card {
     font-family: "Poppins", sans-serif;
     font-weight: bolder;
@@ -179,25 +237,24 @@ body {
     margin-left: 0px;
     width: 100%;
     color: white;
-
   }
 
   .view-product-button:hover {
-    transition: .5s all;
-    background-color: #0F0D09;
+    transition: 0.5s all;
+    background-color: #0f0d09;
   }
-   .view-product-link {
+  .view-product-link {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     text-align: center;
     font-size: 12px;
     color: rgb(157, 157, 157);
     margin-left: 15px;
     margin-right: 15px;
-   }
-   .view-product-link:hover {
+  }
+  .view-product-link:hover {
     color: white;
-   }
+  }
 
   .add-fav-button {
     display: flex;
@@ -237,7 +294,7 @@ body {
     display: flex;
     position: absolute;
     margin-left: 800px;
-    margin-top: 200px;
+    margin-top: 100px;
     font-family: "Poppins", sans-serif;
     transition: 2s ease all;
   }
@@ -250,5 +307,16 @@ body {
   .tipo-piel-boton {
     text-transform: uppercase;
     font-weight: bolder;
+  }
+
+  .container-form {
+    padding-top: 100px;
+  }
+  .dropdown-menu {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .btn-borrarProd {
+    color: black;
   }
 }

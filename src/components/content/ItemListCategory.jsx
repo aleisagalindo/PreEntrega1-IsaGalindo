@@ -1,5 +1,6 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { DarkModeContext } from '../../context/darkModeContext';
 import { consultarBDD } from "../../utils/funcionesUtiles";
 
 
@@ -7,13 +8,14 @@ const ItemListCategory = () => {
 
     const [productos, setProductos] = useState([]);
     const {id} = useParams()
+    const {darkMode} = useContext(DarkModeContext)
     useEffect(() => {
-        consultarBDD("../json/productos.json").then(productos => {
-            const productosCategoria = productos.filter(producto => producto.idCategoria == id)
+        consultarBDD('../json/productos.json').then(productos => {
+            const productosCategoria = productos.filter(producto => producto.idCategoria === parseInt(id) )
             const cardProducto = productosCategoria.map(producto => 
                 <div className="card card-indiv">
                   <img
-                    src={"../img/" + producto.img}
+                    src={producto.img}
                     className="card-img-top img-producto"
                     alt={producto.nombre}
                   />
@@ -24,7 +26,7 @@ const ItemListCategory = () => {
                     <button className="btn btn-dark view-product-button">
                       <Link
                         className="nav-link view-product-link"
-                        to={"/category/" + producto.id}
+                        to={"/item/" + producto.id}
                       >
                         VIEW PRODUCTO
                       </Link>
@@ -39,7 +41,7 @@ const ItemListCategory = () => {
         <>
          <p className='texto-resultado-busqueda'>The best products for skin type:</p>
          <div className='container container-categoria'>
-            <div className="row categoria-producto">
+            <div className={darkMode ? 'darkMode row categoria-producto' : 'row categoria-producto'}>
                 {productos}
             </div>
         </div>

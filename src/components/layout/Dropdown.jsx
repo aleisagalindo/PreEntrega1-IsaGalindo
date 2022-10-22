@@ -3,8 +3,8 @@ import {useState, useEffect} from 'react'
 const Dropdown = ({lista}) => {
   const [list, setList] = useState([]);
   useEffect(() => {
-    const listaDrop = lista.map((piel, indice) => 
-      <Link key={indice} className='dropdown-item' to={`/categoria/${indice + 1}`}>{piel}</Link>
+    const listaDrop = lista.map((categoria, indice) => 
+      <Link key={indice} className='dropdown-item' to={`/categoria/${indice + 1}`}>{categoria}</Link>
     )
     setList(listaDrop)
     

@@ -7,21 +7,26 @@ import Contacto from './content/Contacto';
 import "../styles/App.css";
 import Producto from './content/Producto';
 import ItemListCategory from './content/ItemListCategory';
+import { DarkModeProvider } from '../context/darkModeContext';
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+    
+    <DarkModeProvider>
+    <BrowserRouter>
       <Navbar/>
       <Routes>
         <Route path="/" element={<MainSection/>}/>
         <Route path="/item/:id" element={<Producto/>}/>
-        <Route path="/category/:id" element={<ItemListCategory/>} />
+        <Route path="/categoria/:id" element={<ItemListCategory/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contacto" element={<Contacto/>}/>
+        <Route path="*" element={<h1>Ups! La ruta solicitada no existe</h1>}/>
       </Routes>
       </BrowserRouter>
+    </DarkModeProvider>
     </>
   );
 };
