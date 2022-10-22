@@ -8,15 +8,17 @@ const [carrito, setCarrito] = useState([]);
 
 const agregarProducto = (prod, cant) => {
     const aux = carrito
-    let indice = aux.findIndex(producto => producto.id  == prod.id) //Si existe o no
+    let indice = aux.findIndex(producto => producto.id  == prod[0]) //Si existe o no
 
     if(indice != -1) {
         aux[indice].cantidad = cant
     } else {
-      const prodCarrito = {...prod, cantidad: cant}
+        const id = prod[0]
+        const x =prod[1]
+      const prodCarrito = {id, ...x, cantidad: cant}
       aux.push(prodCarrito)
     }
-    setCarrito([...aux])
+    setCarrito(structuredClone(aux))
     console.log(carrito)
 
 }
@@ -26,12 +28,13 @@ const quitarProducto = (prod) => {
     let indice = aux.findIndex(producto => producto.id  == prod.id)
 
     aux.splice(indice,1)
-    setCarrito([...aux])
+    setCarrito(structuredClone(aux))
 }
 
 const removeAll = () => {
     setCarrito([])
 }
+
 
     return (
         <>

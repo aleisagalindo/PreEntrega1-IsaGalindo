@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import { CarritoContext } from '../../context/CarritoContext';
+import { Link } from 'react-router-dom';
 
 const Carrito = () => {
   const {carrito, agregarProducto, quitarProducto, removeAll} = useContext(CarritoContext)
@@ -7,36 +8,56 @@ const Carrito = () => {
 
   useEffect(() => {
     const prodMostrar = carrito.map(producto => 
-      <div className="card card-indiv" key={producto.id}>
-            <img
-              src={producto.img}
-              className="card-img-top img-producto"
-              alt={producto.nombre}
-            />
-            <div className="card-body">
-              <h5 className="card-title titulo-card">{producto.nombre}</h5>
-              <p className="card-text">Amount: {producto.cantidad}</p>
-              <p className="card-text precio-producto">$ {producto.precio}</p>
-              <p className="card-text">Precio Total: {producto.precio * producto.cantidad}</p>
-              <button className='btn btn-dark' onClick={() => quitarProducto(producto)}>Delete</button>
-            </div>
-          </div>)
+      <>
+  <tbody>
+    <tr>
+      <td className='usuarioImg'>
+        <img className='userImage' src={producto.img}/>
+        </td>
+      <td>{producto.nombre}</td>
+      <td>x{producto.cantidad}</td>
+      <td>${producto.precio * producto.cantidad}</td>
+      <td>
+        <button onClick={() => quitarProducto(producto)} className="btn btn-dark">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+  </>)
           setCarritoLocal(prodMostrar)
   }, [carrito]);
 
   if(carrito.length != 0) {
     return (
       <>
-      <div className='row'>
+      <div className="containerList">
+         <div className="containerToDoList">
+         <table  className='min-w-full leading-normal'>
+          <thead>
+           <tr>
+              <th className='col-1'> </th>
+              <th className='col-1'>Name</th>
+              <th className='col-1'>Amount</th>
+              <th className='col-1'>Price</th>
+            </tr>
+         </thead>
           {carritoLocal}
+         </table>
+         </div>
       </div>
-        <button onClick={() => removeAll()}>Remove All</button>
+        <button className='btn btn-danger' onClick={() => removeAll()}>Remove All</button>
+        <h1>Total:</h1>
+        <button className="btn btn-success">
+          <Link to="/contacto">Go to Pay</Link>
+        </button>
       </>
     );
   }else {
     return (
       <>
-        <h1>No hay elementos</h1>
+        <h1>No hay elementos en el carrito</h1>
+        <button className='btn btn-dark'>
+          <Link to="/">Go Home</Link>
+        </button>
       </>
     );
   }

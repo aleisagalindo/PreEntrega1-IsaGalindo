@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Contacto = () => {
   const datosFormulario = React.useRef();
 
@@ -26,22 +26,16 @@ const Contacto = () => {
             />
             <div name="emailHelp" className="form-text"></div>
           </div>
-          <div className="mb-3">
+          <div className="mb-3" >
             <label htmlFor="email" className="form-label">
               Email
             </label>
             <input type="email" className="form-control" name="email" />
           </div>
-          <div className="mb-3">
-            <textarea
-              name="consulta"
-              rows={10}
-              cols={50}
-              defaultValue={"Escriba su consulta aquí"}
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-dark">
+            <Link>
             Enviar Formulario
+            </Link>
           </button>
         </form>
       </div>
