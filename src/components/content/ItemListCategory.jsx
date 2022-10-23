@@ -1,7 +1,7 @@
 import {useState, useEffect, useContext} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { DarkModeContext } from '../../context/darkModeContext';
-import { consultarBDD } from "../../utils/funcionesUtiles";
+import { getProductos } from '../../utils/firebase';
 
 
 const ItemListCategory = () => {
@@ -10,23 +10,23 @@ const ItemListCategory = () => {
     const {id} = useParams()
     const {darkMode} = useContext(DarkModeContext)
     useEffect(() => {
-        consultarBDD('../json/productos.json').then(productos => {
-            const productosCategoria = productos.filter(producto => producto.idCategoria === parseInt(id) )
+        getProductos().then(productos => {
+            const productosCategoria = productos.filter(producto => producto.idCategoria == producto[1].idCategoria )
             const cardProducto = productosCategoria.map(producto => 
-                <div className="card card-indiv">
+                <div className="card card-indiv" key={producto[0]}>
                   <img
-                    src={producto.img}
+                    src={producto[1].img}
                     className="card-img-top img-producto"
-                    alt={producto.nombre}
+                    alt={producto[1].nombre}
                   />
                   <div className="card-body">
-                    <h5 className="card-title titulo-card">{producto.nombre}</h5>
-                    <p className="card-text">{producto.descripcion}</p>
-                    <p className="card-text precio-producto">$ {producto.precio}</p>
+                    <h5 className="card-title titulo-card">{producto[1].nombre}</h5>
+                    <p className="card-text">{producto[1].descripcion}</p>
+                    <p className="card-text precio-producto">$ {producto[1].precio}</p>
                     <button className="btn btn-dark view-product-button">
                       <Link
                         className="nav-link view-product-link"
-                        to={"/item/" + producto.id}
+                        to={"/item/" + producto[0]}
                       >
                         VIEW PRODUCTO
                       </Link>

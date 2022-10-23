@@ -47,6 +47,12 @@ const getProductos = async() => {
   return items
 }
 
+const getProdCategory = async() => {
+  const productos = await getDocs(collection(db, "productos"))
+  const prodCategory = productos.docs.map(producto => [producto[1].idCategoria, producto.data()])
+  return prodCategory
+}
+
 const updateProducto = async (id, info) => {
   const estado = await updateDoc(doc(db, "productos", id), info)
   return estado
@@ -69,4 +75,4 @@ const createOrdenDeCompra = async(preTotal, nombre, apellido, email, dni, direcc
     return ordenCompra
   }
 
-export {cargarBaseDeDatos, getProductos, getProducto, updateProducto, createOrdenDeCompra, getOrdenCompra}
+export {cargarBaseDeDatos, getProductos, getProducto, updateProducto, createOrdenDeCompra, getOrdenCompra, getProdCategory}
