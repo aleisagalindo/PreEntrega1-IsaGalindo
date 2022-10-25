@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import { CarritoContext } from "../../context/CarritoContext";
-const ItemDetailContainer = ({ producto }) => {
+const ItemDetailContainer = ({producto}) => {
   const [cantidad, setCantidad] = useState(1);
   
   const {carrito, agregarProducto, quitarProducto} = useContext(CarritoContext)
@@ -23,7 +23,7 @@ const ItemDetailContainer = ({ producto }) => {
      <div className="card card-detalladaa">
         <div className="row">
           <div className="col-md-6 container-detalle-producto">
-            <img src={producto[1].img} className="img-fluid rounded-start" alt="..." />
+            <img src={producto[1].img} className="img-fluid rounded-start" alt="..."/>
           </div>
           <div className="col-md-6 card-detallada">
             <div className="card-body">

@@ -5,20 +5,16 @@ import { getProducto } from "../../utils/firebase";
 
 const Producto = () => {
   const [producto, setProducto] = useState([]);
-  const {id} = useParams();
+  const {id} = useParams()
   useEffect(() => {
-
-    getProducto(id).then(prod => {
-      setProducto([prod.id, prod.data()])
-    })
-
- }, [producto])
+     getProducto(id).then(prod => setProducto([prod.id, prod.data()]))
+  }, [])
 
 if(producto.length != 0){
 
   return (
     <div className="card mb-3" style={{maxWidth: '540px'}}>
-      <ItemDetailContainer producto={producto} />
+      <ItemDetailContainer producto={producto}/>
     </div>
 );
 }};
