@@ -7,7 +7,7 @@ const IconsNavGrup2 = () => {
     return (
         <>
             <li>
-              <Link className="link-nav" to="/favoritos">
+              <Link className="link-nav" to="/wishlist">
               <FontAwesomeIcon icon={faHeart} />
               </Link>
             </li>

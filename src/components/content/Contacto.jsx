@@ -28,6 +28,8 @@ const Contacto = () => {
       progress: undefined,
       theme: "light",
     });
+    const vaciarCarrito = removeAll()
+    return vaciarCarrito
   };
 
   
@@ -101,7 +103,6 @@ const Contacto = () => {
           </div>
           <button
             onClick={compraRealizada}
-            onSubmit={() => removeAll()}
             id="submit"
             type="submit"
             className="btn btn-success mb-5"

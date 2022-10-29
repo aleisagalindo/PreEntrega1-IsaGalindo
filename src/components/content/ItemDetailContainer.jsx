@@ -1,9 +1,11 @@
 import React, {useState, useContext} from "react";
 import { CarritoContext } from "../../context/CarritoContext";
+import { WishListContext } from "../../context/WishList";
 const ItemDetailContainer = ({producto}) => {
   const [cantidad, setCantidad] = useState(1);
   
   const {carrito, agregarProducto, quitarProducto} = useContext(CarritoContext)
+  const {fav, addFav, deleteFav} = useContext(WishListContext) 
   
 
   const cantProducto = (operacion) => {
@@ -27,6 +29,7 @@ const ItemDetailContainer = ({producto}) => {
           </div>
           <div className="col-md-6 card-detallada">
             <div className="card-body">
+              <button className="btn-add-fav" onClick={() => addFav(producto)}><i class="fa-regular fa-heart add-fav-icon"></i></button>
               <h5 className="card-title">{producto[1].nombre}</h5>
               <p className="card-text">{producto[1].descripcionDetallada}</p>
               <p className="card-text tipo-piel-boton">{producto[1].piel}</p>

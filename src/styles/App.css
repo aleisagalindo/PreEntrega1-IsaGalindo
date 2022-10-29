@@ -421,4 +421,22 @@ table {
   text-decoration: none;
   color: white;
 }
+.delete-fav-icon {
+  display: flex;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 220px;
+  font-size: 18px;
+}
+.btn-add-fav {
+  border: none;
+}
+
+.add-fav-icon {
+  display: flex;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 220px;
+  font-size: 18px;
+}
 }
