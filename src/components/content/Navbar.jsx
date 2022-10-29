@@ -9,6 +9,7 @@ import { DarkModeContext } from "../../context/darkModeContext";
 const Navbar = () => {
   const {darkMode, toggleDarkMode} = useContext(DarkModeContext)
   const listDropdown = ["All Skin", "Acne", "Dry", "Oily", "Sesitive"];
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg nav-bar">

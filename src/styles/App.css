@@ -417,4 +417,8 @@ table {
 .container-form {
   font-family: "Poppins", sans-serif;
 }
+.finish-button .finish-button-link {
+  text-decoration: none;
+  color: white;
+}
 }
