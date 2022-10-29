@@ -10,6 +10,7 @@ Es un Ecommerce de venta de productos para el cuidado de la piel.
 - [React-router-dom](https://v5.reactrouter.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [FotsAwesome](https://fontawesome.com/docs/web/use-with/react/add-icons)
+- [Toastify](https://www.npmjs.com/package/react-toastify)
 
 
 ## Gif use demo
