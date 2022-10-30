@@ -310,7 +310,7 @@ html {
   }
 
   .container-form {
-    padding-top: 100px;
+    padding-top: 80px;
   }
   .dropdown-menu {
     font-family: "Poppins", sans-serif;
@@ -438,5 +438,12 @@ table {
   margin-top: 20px;
   margin-left: 220px;
   font-size: 18px;
+}
+.total-order {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 115px;
 }
 }

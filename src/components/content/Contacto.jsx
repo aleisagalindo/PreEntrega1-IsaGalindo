@@ -36,6 +36,7 @@ const Contacto = () => {
 
   return (
     <>
+    <p className="total-order">Está por pagar : ${getTotal(carrito)}</p>
       <div className="container container-form">
         <p>Completa el siguiente formulario:</p>
         <form id="formulario" className="formulario d-block" onSubmit={consultarForm} ref={datosFormulario}>
